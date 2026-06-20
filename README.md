@@ -1,50 +1,145 @@
-# House Price Prediction AI/ML Project
+# 🏠 House Price Prediction using Machine Learning
 
-This project involves building a machine learning model to predict house prices based on various features. The dataset used for this project is from the Kaggle competition "House Prices - Advanced Regression Techniques". The goal is to develop a model that accurately predicts house prices given a set of input features.
+## Overview
 
-## Kaggle Competition
-- Dataset: [House Prices - Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
-- Model Score: 87.16% (R-squared score)
+This project focuses on predicting residential property prices using Machine Learning techniques. By analyzing various housing features such as location, size, and property characteristics, the model estimates the market value of a house with high accuracy.
 
-## File Structure
-- `house_price_prediction.ipynb`: Jupyter Notebook containing the code for data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and prediction.
-- `submission.csv`: CSV file containing the predicted house prices for the test dataset.
-- `gbr.pkl`: Pickle file containing the trained GradientBoostingRegressor model.
+The project demonstrates the complete machine learning workflow, including data preprocessing, feature engineering, model selection, training, evaluation, and prediction.
 
-## Libraries Used
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- XGBoost
+---
 
-## Data Loading and Analysis
-- The training and test datasets are loaded from CSV files.
-- Exploratory data analysis is performed to understand the structure and characteristics of the data.
-- Data visualization techniques such as histograms, box plots, and heatmaps are used to analyze the distribution of features and identify missing values.
+## Project Objectives
+
+* Analyze housing market data
+* Identify important features affecting house prices
+* Train and compare multiple regression models
+* Select the best-performing model
+* Generate accurate price predictions for unseen data
+
+---
+
+## Dataset
+
+The project uses a real-world housing dataset containing multiple property attributes and corresponding sale prices.
+
+### Features Include:
+
+* Lot Area
+* Overall Quality
+* Year Built
+* Number of Rooms
+* Garage Capacity
+* Basement Area
+* Living Area
+* And several other housing-related attributes
+
+---
+
+## Project Structure
+
+```text
+House-Price-Prediction/
+│
+├── house_price_prediction.ipynb
+├── gbr.pkl
+├── submission.csv
+├── train.csv
+├── test.csv
+└── README.md
+```
+
+### File Description
+
+| File                         | Description                     |
+| ---------------------------- | ------------------------------- |
+| house_price_prediction.ipynb | Complete project implementation |
+| gbr.pkl                      | Trained machine learning model  |
+| submission.csv               | Generated predictions           |
+| train.csv                    | Training dataset                |
+| test.csv                     | Testing dataset                 |
+
+---
+
+## Technologies Used
+
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* XGBoost
+* Jupyter Notebook
+
+---
 
 ## Data Preprocessing
-- Missing values are handled using appropriate techniques such as imputation or dropping columns.
-- Categorical variables are encoded using one-hot encoding.
-- Numerical features are standardized to ensure uniformity and improve model performance.
 
-## Model Selection and Training
-- Several regression models are considered, including Linear Regression, SVR, SGDRegressor, KNeighborsRegressor, DecisionTreeRegressor, RandomForestRegressor, GradientBoostingRegressor, XGBRegressor, and MLPRegressor.
-- Cross-validation is used to evaluate each model's performance based on the R-squared score.
-- The GradientBoostingRegressor model is selected based on its superior performance.
+The following preprocessing techniques were applied:
 
-## Model Evaluation and Prediction
-- The selected model is trained on the training dataset.
-- The trained model is used to make predictions on the test dataset.
-- The predictions are saved to a CSV file (`submission.csv`) for submission.
+* Missing value treatment
+* Feature selection
+* One-Hot Encoding
+* Data cleaning
+* Feature transformation
+* Dataset normalization
 
+These steps improve model performance and prediction accuracy.
 
-## Additional Notes
-- The `submission.csv` file contains the predicted house prices for the test dataset.
-- The trained model (`gbr.pkl`) is stored as a pickle file for future use or deployment.
+---
 
-For any further inquiries or improvements, feel free to reach out.
+## Machine Learning Models Evaluated
 
-### Connect me:
-[Linkedin](https://www.linkedin.com/in/nirdesh-devadiya-55b408209)
+Multiple regression algorithms were tested and compared:
+
+* Linear Regression
+* Support Vector Regression (SVR)
+* K-Nearest Neighbors Regressor
+* Decision Tree Regressor
+* Random Forest Regressor
+* Gradient Boosting Regressor
+* XGBoost Regressor
+* Multi-Layer Perceptron Regressor
+
+After evaluation, the Gradient Boosting Regressor achieved the best overall performance.
+
+---
+
+## Model Performance
+
+**Evaluation Metric:** R² Score
+
+**Best Model:** Gradient Boosting Regressor
+
+**Achieved Accuracy:** 87.16%
+
+The selected model demonstrated strong predictive capability on unseen housing data.
+
+---
+
+## Prediction Workflow
+
+1. Load dataset
+2. Clean and preprocess data
+3. Perform feature engineering
+4. Train regression models
+5. Compare model performance
+6. Select best model
+7. Generate house price predictions
+8. Export results to CSV
+
+---
+
+## Future Improvements
+
+* Hyperparameter tuning
+* Deployment using Flask or Streamlit
+* Interactive web interface
+* Integration with real estate APIs
+* Advanced ensemble techniques
+
+---
+
+## Conclusion
+
+This project successfully demonstrates the application of Machine Learning in real estate price prediction. Through proper preprocessing, feature engineering, and model optimization, reliable housing price estimates can be generated from property data.
